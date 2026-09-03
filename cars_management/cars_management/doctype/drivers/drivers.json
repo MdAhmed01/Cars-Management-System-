@@ -8,7 +8,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "driver_list_form_section",
+  "section_break_cdni",
   "enabled",
   "first_name",
   "last_name",
@@ -19,11 +19,6 @@
   "license_number"
  ],
  "fields": [
-  {
-   "fieldname": "driver_list_form_section",
-   "fieldtype": "Section Break",
-   "label": "Driver List Form"
-  },
   {
    "default": "1",
    "fieldname": "enabled",
@@ -50,8 +45,7 @@
    "fieldname": "license_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "License Number",
-   "reqd": 1
+   "label": "License Number"
   },
   {
    "fieldname": "column_break_tezd",
@@ -72,13 +66,18 @@
    "fieldtype": "Data",
    "label": "Full name",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_cdni",
+   "fieldtype": "Section Break",
+   "label": "Driver Data"
   }
  ],
  "grid_page_length": 50,
  "image_field": "driver_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-18 21:57:08.820854",
+ "modified": "2026-09-03 00:06:50.548814",
  "modified_by": "Administrator",
  "module": "Cars Management",
  "name": "Drivers",
@@ -95,6 +94,15 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Drivers Manager",
    "write": 1
   }
  ],

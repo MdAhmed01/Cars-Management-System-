@@ -1,0 +1,33 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition_type": "Python",
+ "creation": "2026-08-24 17:53:55.207403",
+ "date_changed": "insurance_expiry",
+ "days_in_advance": 4,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vehicle",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-08-24 22:14:53.666927",
+ "modified_by": "Administrator",
+ "module": "Cars Management",
+ "name": "Insurance Expiry Reminder",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 1,
+ "subject": " {{ doc.title }} insurance is expiring soon "
+}

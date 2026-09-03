@@ -1,0 +1,38 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<article class="vehicle-details">
+	<h1>{{ doc.title | e }}</h1>
+
+	<dl>
+		<dt>Brand</dt>
+		<dd>{{ doc.brand | e }}</dd>
+
+		<dt>Model</dt>
+		<dd>{{ doc.model | e }}</dd>
+
+		<dt>Year</dt>
+		<dd>{{ doc.year | e }}</dd>
+
+		{% if doc.color %}
+			<dt>Color</dt>
+			<dd>{{ doc.color | e }}</dd>
+		{% endif %}
+
+		<dt>License Plate</dt>
+		<dd>{{ doc.license_plate | e }}</dd>
+
+        {% if doc.vehicle_image %}
+            <dt>Image</dt>
+            <dd><img src="{{ doc.vehicle_image }}" /></dd>
+        {% else %}
+            <span>No image available</span>
+        {% endif %}
+
+        <a class="btn btn-info" href="/order-a-ride/new?vehicle={{ doc.name }}"> BOOK NOW </a>
+    
+	</dl>
+</article>
+
+{% endblock %}

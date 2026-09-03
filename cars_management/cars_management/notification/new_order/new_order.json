@@ -1,0 +1,32 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition_type": "Python",
+ "creation": "2026-08-24 16:18:47.281988",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride order",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "New booking has arrived",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-08-24 22:16:52.954492",
+ "modified_by": "Administrator",
+ "module": "Cars Management",
+ "name": "New Order",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.vehicle }} is booked by {{ doc.customer_name }}"
+}

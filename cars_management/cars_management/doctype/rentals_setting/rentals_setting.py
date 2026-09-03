@@ -5,10 +5,7 @@
 from frappe.model.document import Document
 
 
-class Drivers(Document):
-	def before_save(self):
-		self.full_name = f"{self.first_name} {self.last_name or ''}"
-
+class RentalsSetting(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -17,13 +14,7 @@ class Drivers(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		driver_photo: DF.AttachImage | None
-		enabled: DF.Check
-		first_name: DF.Data
-		full_name: DF.Data | None
-		last_name: DF.Data | None
-		license_number: DF.Data | None
-		phone_number: DF.Data
+		standard_rate: DF.Currency
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Drivers"
+	_DOCTYPE_NAME = "Rentals Setting"

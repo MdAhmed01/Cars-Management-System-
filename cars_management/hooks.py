@@ -172,7 +172,7 @@ use_json_request_body = True
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Vehicle": "cars_management.test.get_permission_query_conditions",
 # }
 #
 # has_permission = {
@@ -184,16 +184,22 @@ use_json_request_body = True
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+# 	"Ride Booking": {
+		
+# 		"validate": "cars_management.test.validate_amount"
+		
 # 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+    "all":  [
+            "cars_management.test.throw_emoji"
+        ]
+    
+}
 # scheduler_events = {
 # 	"all": [
 # 		"cars_management.tasks.all"
